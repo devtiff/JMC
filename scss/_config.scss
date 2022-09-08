@@ -1,0 +1,29 @@
+$jaja-blue: #0D4D8D;
+$light-blue: #E2EDFB;
+$lighty-blue: #bfd7fe;
+$text-blue: #182F57;
+$medical-green: #7BDA5C;
+$special-font: 'Poppins',
+    sans-serif;
+$logo-font: 'Montserrat',
+    sans-serif;
+$normal-font: Arial, Helvetica, sans-serif;
+
+
+// set text color based on background
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return $text-blue;
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+// set background & text color
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color)
+}

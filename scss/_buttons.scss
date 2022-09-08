@@ -1,0 +1,33 @@
+%btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 25px;
+
+    &:hover {
+        transform: scale(.99);
+        color: $jaja-blue
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    @include set-background(lighten($lighty-blue, 8%))
+}
+
+.btn-secondary {
+    @extend %btn;
+    @include set-background($medical-green)
+}
+
+.btn-why {
+    @include set-background($jaja-blue);
+    margin-left: none;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px;
+
+    &:hover {
+        color: #fff;
+    }
+}
